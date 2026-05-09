@@ -132,9 +132,6 @@ String _getPortfolioHTML() {
     </div>
   </section>
 
-  <footer>
-    <p>Desenvolvido com Dart &hearts; 2026 Rodrigo Heloani de Brito</p>
-  </footer>
 </div>
   ''';
 }
