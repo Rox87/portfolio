@@ -25,7 +25,7 @@ String _getPortfolioHTML() {
     
     <div class="glass-card">
       <p style="font-size: 1.15rem; color: var(--text-secondary); text-align: left; line-height: 1.8;">
-        Profissional com sólida experiência em programação, matemática, finanças, engenharia de dados e ciência de dados e IA. 
+        Profissional com sólida experiência em programação, matemática, finanças, engenharia e ciência de dados, e IA. 
         Destaca-se pela comunicação acessível sobre assuntos técnicos e pelo compromisso com o aprendizado contínuo. 
         Possui forte capacidade analítica para avaliação de dados, contribuindo para a gestão eficiente de projetos e motivação de equipes.
       </p>
@@ -120,6 +120,7 @@ String _getPortfolioHTML() {
     
     <div class="skills-grid">
       <div class="skill-tag"><i class="fas fa-database"></i> Conhecimento técnico em dados</div>
+      <div class="skill-tag"><i class="fas fa-robot"></i> IA Generativa e Engenharia de Prompt</div>
       <div class="skill-tag"><i class="fas fa-comments"></i> Comunicação técnica acessível</div>
       <div class="skill-tag"><i class="fas fa-cogs"></i> Automação de processos</div>
       <div class="skill-tag"><i class="fas fa-vial"></i> Testes e validação de software</div>
@@ -136,11 +137,8 @@ String _getPortfolioHTML() {
   <div id="modalOverlay" class="modal-overlay">
       <div class="modal-content">
           <button id="closeModal" class="close-btn">&times;</button>
-          <div class="video-container">
-              <video id="portfolioVideo" playsinline>
-                  <source src="david_vencer_golias.mp4" type="video/mp4">
-                  Seu navegador não suporta vídeos.
-              </video>
+          <div class="image-container">
+              <img id="portfolioImage" src="david_vencer_golias.png" alt="David vencendo Golias">
           </div>
       </div>
   </div>
