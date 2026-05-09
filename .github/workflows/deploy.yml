@@ -22,6 +22,9 @@ jobs:
       - name: Build project
         run: dart run build_runner build --release --output web:build
 
+      - name: Add .nojekyll
+        run: touch build/.nojekyll
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
