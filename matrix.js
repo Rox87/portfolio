@@ -66,23 +66,20 @@ function showMatrixLogOnScreen(message) {
 document.body.addEventListener('click', (e) => {
   if (e.target && e.target.id === 'easterEggName') {
     nameClickCount++;
-
-    // Matrix style on-screen log
-    showMatrixLogOnScreen(`${nameClickCount}`);
-
+    if (nameClickCount <= 12) {
+      // Matrix style on-screen log
+      showMatrixLogOnScreen(`${nameClickCount}`);
+    }
     // Fallback to console too
     console.log(
       `%c[MATRIX] Clicks on name: ${nameClickCount}`,
       'color: #0F0; background: #000; font-family: monospace; font-size: 14px; font-weight: bold; padding: 2px 5px; border: 1px solid #0F0;'
     );
 
-    if (nameClickCount == 40) {
+    if (nameClickCount == 12) {
       const overlay = document.getElementById('modalOverlay');
-      const video = document.getElementById('portfolioVideo');
-
-      if (overlay && video) {
+      if (overlay) {
         overlay.classList.add('active');
-        video.play().catch(err => console.log("Auto-play blocked, user interaction needed."));
       }
     }
   }
@@ -92,19 +89,13 @@ document.body.addEventListener('click', (e) => {
 document.body.addEventListener('click', (e) => {
   const overlay = document.getElementById('modalOverlay');
   const closeBtn = document.getElementById('closeModal');
-  const video = document.getElementById('portfolioVideo');
 
   if (overlay && overlay.classList.contains('active')) {
-    // Close if click on overlay background or close button
-    if (e.target === overlay || e.target === closeBtn || (closeBtn && closeBtn.contains(e.target))) {
+    // ONLY close if click on close button
+    if (e.target === closeBtn || (closeBtn && closeBtn.contains(e.target))) {
       overlay.classList.remove('active');
-      if (video) {
-        video.pause();
-        video.currentTime = 0;
-      }
-      // reset counter after modal is closed
 
-      showMatrixLogOnScreen(`Eliminando provas...`);
+      showMatrixLogOnScreen(`Atualizado com sucesso!`);
       console.log(
         `%c[MATRIX] Counter reset.`,
         'color: #0F0; background: #000; font-family: monospace; font-size: 14px; font-weight: bold; padding: 2px 5px; border: 1px solid #0F0;'
