@@ -17,7 +17,7 @@ String _getPortfolioHTML() {
     <h2 class="hero-subtitle">Engenheiro de Dados | Analista de Dados MIS | Cientista de Dados</h2>
     
     <div class="contact-info">
-      <div><i class="fas fa-envelope"></i> heloani.rodrigo@gmail.com</div>
+      <div><i class="fas fa-envelope"></i> rodrigohbx@gmail.com</div>
       <div><i class="fas fa-phone"></i> +55 11 999224-4443</div>
       <div><i class="fas fa-map-marker-alt"></i> Santo André, SP</div>
       <div><i class="fas fa-calendar-alt"></i> 30/04/1987</div>
