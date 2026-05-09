@@ -1,18 +1,52 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rodrigo Heloani | Data Engineer & Data Scientist</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script defer src="main.dart.js"></script>
-    <script defer src="matrix.js"></script>
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Rodrigo Heloani | Data Engineer & Data Scientist">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="portfolio">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Rodrigo Heloani | Data Engineer & Data Scientist</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script src="matrix.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: transparent !important;
+    }
+    #matrixCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      opacity: 0.3;
+      pointer-events: none;
+    }
+    .flutter-view-root {
+      background-color: transparent !important;
+    }
+    /* Let flutter root container be transparent */
+    flutter-view {
+      background: transparent !important;
+    }
+  </style>
+
 </head>
-<body>
-    <div id="app"></div>
+<body style="background-color: transparent;">
+  <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
