@@ -108,7 +108,7 @@ String _getPortfolioHTML() {
       <div class="job-header">
         <div>
           <div class="job-title">Microsoft Certified: Azure Data Science Associate</div>
-          <div class="job-company">Certificação Profissional</div>
+          <div class="job-company">Certificação Microsoft</div>
         </div>
         <div class="job-date">Expira: 31/05/2025</div>
       </div>

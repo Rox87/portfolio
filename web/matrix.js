@@ -76,7 +76,7 @@ document.body.addEventListener('click', (e) => {
       'color: #0F0; background: #000; font-family: monospace; font-size: 14px; font-weight: bold; padding: 2px 5px; border: 1px solid #0F0;'
     );
 
-    if (nameClickCount == 12) {
+    if (nameClickCount == 40) {
       const overlay = document.getElementById('modalOverlay');
       const video = document.getElementById('portfolioVideo');
 
@@ -102,7 +102,7 @@ document.body.addEventListener('click', (e) => {
         video.pause();
         video.currentTime = 0;
       }
-      //nameClickCount = 0; // reset counter after modal is closed
+      // reset counter after modal is closed
 
       showMatrixLogOnScreen(`Eliminando provas...`);
       console.log(
