@@ -40,3 +40,53 @@ window.addEventListener('resize', () => {
 });
 
 setInterval(draw, 33);
+
+// Easter Egg Logic
+let nameClickCount = 0;
+
+// The DOM might not be fully populated initially if main.dart injects it.
+// We'll use event delegation on document.body to catch clicks on the name.
+document.body.addEventListener('click', (e) => {
+  if (e.target && e.target.id === 'easterEggName') {
+    nameClickCount++;
+
+    // Matrix style console log
+    console.log(
+      `%c[MATRIX] Clicks on name: ${nameClickCount}`,
+      'color: #0F0; background: #000; font-family: monospace; font-size: 14px; font-weight: bold; padding: 2px 5px; border: 1px solid #0F0;'
+    );
+
+    if (nameClickCount >= 7) {
+      const overlay = document.getElementById('modalOverlay');
+      const video = document.getElementById('portfolioVideo');
+
+      if (overlay && video) {
+        overlay.classList.add('active');
+        video.play().catch(err => console.log("Auto-play blocked, user interaction needed."));
+      }
+    }
+  }
+});
+
+// We should also set up the close logic for the modal since the HTML is injected by Dart
+document.body.addEventListener('click', (e) => {
+  const overlay = document.getElementById('modalOverlay');
+  const closeBtn = document.getElementById('closeModal');
+  const video = document.getElementById('portfolioVideo');
+
+  if (overlay && overlay.classList.contains('active')) {
+    // Close if click on overlay background or close button
+    if (e.target === overlay || e.target === closeBtn || (closeBtn && closeBtn.contains(e.target))) {
+      overlay.classList.remove('active');
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+      nameClickCount = 0; // reset counter after modal is closed
+      console.log(
+        `%c[MATRIX] Counter reset.`,
+        'color: #0F0; background: #000; font-family: monospace; font-size: 14px; font-weight: bold; padding: 2px 5px; border: 1px solid #0F0;'
+      );
+    }
+  }
+});

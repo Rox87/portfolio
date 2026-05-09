@@ -13,7 +13,7 @@ String _getPortfolioHTML() {
   return '''
 <div class="container">
   <header>
-    <h1 class="hero-title">Rodrigo Heloani de Brito</h1>
+    <h1 class="hero-title" id="easterEggName" style="cursor: pointer;">Rodrigo Heloani de Brito</h1>
     <h2 class="hero-subtitle">Engenheiro de Dados | Analista de Dados MIS | Cientista de Dados</h2>
     
     <div class="contact-info">
@@ -131,6 +131,19 @@ String _getPortfolioHTML() {
       <div class="skill-tag"><i class="fas fa-language"></i> Inglês (C1 - Avançado)</div>
     </div>
   </section>
+
+  <!-- Modal Popup -->
+  <div id="modalOverlay" class="modal-overlay">
+      <div class="modal-content">
+          <button id="closeModal" class="close-btn">&times;</button>
+          <div class="video-container">
+              <video id="portfolioVideo" playsinline>
+                  <source src="david_vencer_golias.mp4" type="video/mp4">
+                  Seu navegador não suporta vídeos.
+              </video>
+          </div>
+      </div>
+  </div>
 
 </div>
   ''';
