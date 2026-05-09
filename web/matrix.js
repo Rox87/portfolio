@@ -44,19 +44,39 @@ setInterval(draw, 33);
 // Easter Egg Logic
 let nameClickCount = 0;
 
+function showMatrixLogOnScreen(message) {
+  let logEl = document.getElementById('matrixLogMsg');
+  if (!logEl) {
+    logEl = document.createElement('div');
+    logEl.id = 'matrixLogMsg';
+    logEl.className = 'matrix-log';
+    document.body.appendChild(logEl);
+  }
+
+  logEl.textContent = message;
+
+  // Reset animation
+  logEl.style.animation = 'none';
+  logEl.offsetHeight; // trigger reflow
+  logEl.style.animation = null;
+}
+
 // The DOM might not be fully populated initially if main.dart injects it.
 // We'll use event delegation on document.body to catch clicks on the name.
 document.body.addEventListener('click', (e) => {
   if (e.target && e.target.id === 'easterEggName') {
     nameClickCount++;
 
-    // Matrix style console log
+    // Matrix style on-screen log
+    showMatrixLogOnScreen(`${nameClickCount}`);
+
+    // Fallback to console too
     console.log(
       `%c[MATRIX] Clicks on name: ${nameClickCount}`,
       'color: #0F0; background: #000; font-family: monospace; font-size: 14px; font-weight: bold; padding: 2px 5px; border: 1px solid #0F0;'
     );
 
-    if (nameClickCount >= 7) {
+    if (nameClickCount == 12) {
       const overlay = document.getElementById('modalOverlay');
       const video = document.getElementById('portfolioVideo');
 
@@ -82,7 +102,9 @@ document.body.addEventListener('click', (e) => {
         video.pause();
         video.currentTime = 0;
       }
-      nameClickCount = 0; // reset counter after modal is closed
+      //nameClickCount = 0; // reset counter after modal is closed
+
+      showMatrixLogOnScreen(`Eliminando provas...`);
       console.log(
         `%c[MATRIX] Counter reset.`,
         'color: #0F0; background: #000; font-family: monospace; font-size: 14px; font-weight: bold; padding: 2px 5px; border: 1px solid #0F0;'
