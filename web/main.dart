@@ -30,7 +30,7 @@ String _getPortfolioHTML() {
     <div class="nav-actions">
       <button id="toggleMatrixBtn" class="nav-control-btn" type="button" title="Alternar intensidade do efeito Matrix">
         <i class="fas fa-terminal"></i>
-        <span id="matrixStatusText">Matrix: ON</span>
+        <span id="matrixStatusText">Matrix: OFF</span>
       </button>
 
       <a href="https://wa.me/5511999224443?text=Ol%C3%A1%20Rodrigo,%20vi%20seu%20portf%C3%B3lio!" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary nav-cta">
