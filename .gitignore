@@ -2,5 +2,8 @@
 # Created by `dart pub`
 .dart_tool/
 .build/
+build/
 .test/
 .lib/
+screenshot_*.png
+test_interactive.js
