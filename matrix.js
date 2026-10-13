@@ -47,7 +47,8 @@
     }
   }
 
-  let matrixState = 'ON'; // 'ON', 'SUAVE', 'OFF'
+  let matrixState = 'OFF'; // Default: 'OFF' (user can cycle to 'ON' or 'SUAVE')
+  document.body.classList.add('matrix-off');
 
   let lastDrawTime = 0;
   const fps = 30;
