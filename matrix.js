@@ -216,7 +216,7 @@
       overlay.classList.add('active');
       overlay.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
-      showMatrixHUDLog(`[ACESSO TOTAL] Protocolo David vs Golias desbloqueado!`);
+      showMatrixHUDLog(`[ACESSO TOTAL] Chave mestra criptográfica desbloqueada!`);
     }
   }
 
