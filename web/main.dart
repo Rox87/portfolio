@@ -654,15 +654,15 @@ String _getPortfolioHTML() {
     <div class="modal-cyber-bar">
       <div class="modal-title-status">
         <span class="status-dot-blink"></span>
-        <span>ACESSO PRIVILEGIADO // PROTOCOLO DAVID VS GOLIAS [DESCRIPTOGRAFADO]</span>
+        <span>ACESSO PRIVILEGIADO // CHAVE MESTRA CRIPTOGRÁFICA [DESBLOQUEADA]</span>
       </div>
       <button id="closeModal" class="close-btn" type="button" aria-label="Fechar modal">&times;</button>
     </div>
     <div class="image-container">
-      <img id="portfolioImage" src="david_vencer_golias.png" alt="David vencendo Golias - A precisão técnica supera o gigante">
+      <img id="portfolioImage" src="chave.png" alt="Chave Mestra Criptográfica - Acesso aos Sistemas">
     </div>
     <div class="modal-footer-caption">
-      <p><strong>"A estratégia, o preparo e a precisão técnica superam qualquer gigante."</strong></p>
+      <p><strong>"Você encontrou a chave mestra. A curiosidade e a técnica abrem qualquer porta."</strong></p>
       <span class="modal-shortcut-hint">Pressione ESC para fechar</span>
     </div>
   </div>
